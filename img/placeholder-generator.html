@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Imágenes Placeholder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .image-placeholder {
+            width: 300px;
+            height: 200px;
+            background: linear-gradient(135deg, #0066ff, #ff6600);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .profile-placeholder {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #0066ff, #ff6600);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .instructions {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Imágenes Placeholder</h1>
+        
+        <div class="instructions">
+            <h3>Instrucciones:</h3>
+            <p>1. Haz clic derecho en cada imagen placeholder</p>
+            <p>2. Selecciona "Guardar imagen como..."</p>
+            <p>3. Guarda con el nombre especificado en la carpeta img/</p>
+            <p>4. Reemplaza estas imágenes con las generadas por IA</p>
+        </div>
+
+        <h3>Imágenes Requeridas:</h3>
+        
+        <div>
+            <h4>1. lawyer-profile.jpg (400x400px)</h4>
+            <div class="profile-placeholder">
+                <div>
+                    <div>👨‍💼</div>
+                    <div>ABOGADO PROFESIONAL</div>
+                    <div>Derecho Civil</div>
+                    <div>400x400px</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4>2. civil-law.jpg (300x200px)</h4>
+            <div class="image-placeholder">
+                <div>
+                    <div>⚖️</div>
+                    <div>DERECHO CIVIL</div>
+                    <div>Contratos • Familia • Sucesiones</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4>3. real-estate-law.jpg (300x200px)</h4>
+            <div class="image-placeholder">
+                <div>
+                    <div>🏠</div>
+                    <div>DERECHO INMOBILIARIO</div>
+                    <div>Propiedades • Arrendamientos</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4>4. notarial-law.jpg (300x200px)</h4>
+            <div class="image-placeholder">
+                <div>
+                    <div>📜</div>
+                    <div>DERECHO NOTARIAL</div>
+                    <div>Autenticación • Protocolización</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4>5. urban-law.jpg (300x200px)</h4>
+            <div class="image-placeholder">
+                <div>
+                    <div>🏗️</div>
+                    <div>DERECHO URBANÍSTICO</div>
+                    <div>Construcción • Licencias</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; padding: 15px; background: #fff3cd; border-radius: 8px;">
+            <h4>⚠️ Nota Importante:</h4>
+            <p>Estas son imágenes placeholder temporales. Para el sitio web final, reemplaza estas imágenes con versiones generadas por IA que sean más profesionales y específicas para cada área del derecho.</p>
+        </div>
+    </div>
+
+    <script>
+        // Función para generar y descargar imágenes placeholder
+        function generatePlaceholderImage(text, width, height, filename) {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            
+            // Fondo degradado
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, '#0066ff');
+            gradient.addColorStop(1, '#ff6600');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Texto
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(text, width/2, height/2);
+            
+            // Descargar
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Agregar botones de descarga
+        document.addEventListener('DOMContentLoaded', function() {
+            const placeholders = document.querySelectorAll('.image-placeholder, .profile-placeholder');
+            placeholders.forEach((placeholder, index) => {
+                const button = document.createElement('button');
+                button.textContent = 'Descargar';
+                button.style.cssText = 'margin: 5px; padding: 5px 10px; background: #0066ff; color: white; border: none; border-radius: 5px; cursor: pointer;';
+                button.onclick = function() {
+                    const filenames = ['lawyer-profile.jpg', 'civil-law.jpg', 'real-estate-law.jpg', 'notarial-law.jpg', 'urban-law.jpg'];
+                    const texts = ['ABOGADO PROFESIONAL', 'DERECHO CIVIL', 'DERECHO INMOBILIARIO', 'DERECHO NOTARIAL', 'DERECHO URBANÍSTICO'];
+                    const sizes = [[400, 400], [300, 200], [300, 200], [300, 200], [300, 200]];
+                    
+                    generatePlaceholderImage(texts[index], sizes[index][0], sizes[index][1], filenames[index]);
+                };
+                placeholder.parentNode.appendChild(button);
+            });
+        });
+    </script>
+</body>
+</html>
+

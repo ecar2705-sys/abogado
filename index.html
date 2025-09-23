@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cárdenas & Cárdenas - Asesorías Legales</title>
+    
+    <!-- Enlace a Google Fonts para tipografía moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Enlace a Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Enlace a nuestro archivo CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navegación principal -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo del bufete -->
+            <div class="nav-logo">
+                <h2>Cárdenas & Cárdenas</h2>
+            </div>
+            
+            <!-- Menú de navegación -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </li>
+            </ul>
+            
+            <!-- Botón hamburguesa para móviles -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de presentación/hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- Información principal del bufete -->
+                <h1 class="hero-title">Cárdenas & Cárdenas</h1>
+                <h2 class="hero-subtitle">Asesorías, Consultorías y Defensas en Derecho</h2>
+                
+                <!-- Descripción de especialidades -->
+                <div class="hero-description">
+                    <p>Especialistas en <strong>Derecho Civil</strong>, <strong>Derecho Inmobiliario</strong>, <strong>Derecho Notarial</strong> y <strong>Derecho Urbanístico</strong>. Ofrecemos servicios legales integrales con más de 15 años de experiencia.</p>
+                    
+                    <div class="specialties">
+                        <div class="specialty" onclick="navigateToService('servicio-civil')">
+                            <i class="fas fa-gavel"></i>
+                            <span>Derecho Civil</span>
+                        </div>
+                        <div class="specialty" onclick="navigateToService('servicio-inmobiliario')">
+                            <i class="fas fa-home"></i>
+                            <span>Derecho Inmobiliario</span>
+                        </div>
+                        <div class="specialty" onclick="navigateToService('servicio-notarial')">
+                            <i class="fas fa-file-contract"></i>
+                            <span>Derecho Notarial</span>
+                        </div>
+                        <div class="specialty" onclick="navigateToService('servicio-urbanistico')">
+                            <i class="fas fa-city"></i>
+                            <span>Derecho Urbanístico</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botón de llamada a la acción -->
+                <a href="#contacto" class="cta-button">Consulta Gratuita</a>
+            </div>
+            
+            <!-- Imagen de perfil generada por IA -->
+            <div class="hero-image">
+                <img src="img/lawyer-profile.svg" alt="Abogado especialista en derecho civil e inmobiliario" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <!-- Título de la sección -->
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Soluciones legales integrales para todas sus necesidades</p>
+            </div>
+            
+            <!-- Grid de servicios -->
+            <div class="services-grid">
+                <!-- Servicio 1: Derecho Civil -->
+                <div id="servicio-civil" class="service-card">
+                    <div class="service-icon">
+                        <img src="img/civil-law.svg" alt="Derecho Civil" class="service-img">
+                    </div>
+                    <h3 class="service-title">Derecho Civil</h3>
+                    <p class="service-description">Asesoría en contratos, responsabilidad civil, sucesiones, familia y personas. Protegemos sus derechos fundamentales.</p>
+                    <ul class="service-list">
+                        <li>Contratos civiles y comerciales</li>
+                        <li>Responsabilidad civil extracontractual</li>
+                        <li>Sucesiones y herencias</li>
+                        <li>Derecho de familia</li>
+                    </ul>
+                </div>
+                
+                <!-- Servicio 2: Derecho Inmobiliario -->
+                <div id="servicio-inmobiliario" class="service-card">
+                    <div class="service-icon">
+                        <img src="img/real-estate-law.svg" alt="Derecho Inmobiliario" class="service-img">
+                    </div>
+                    <h3 class="service-title">Derecho Inmobiliario</h3>
+                    <p class="service-description">Especialistas en transacciones inmobiliarias, propiedad horizontal, arrendamientos y litigios de propiedad.</p>
+                    <ul class="service-list">
+                        <li>Compraventa de inmuebles</li>
+                        <li>Propiedad horizontal</li>
+                        <li>Arrendamientos</li>
+                        <li>Litigios de propiedad</li>
+                    </ul>
+                </div>
+                
+                <!-- Servicio 3: Derecho Notarial -->
+                <div id="servicio-notarial" class="service-card">
+                    <div class="service-icon">
+                        <img src="img/notarial-law.svg" alt="Derecho Notarial" class="service-img">
+                    </div>
+                    <h3 class="service-title">Derecho Notarial</h3>
+                    <p class="service-description">Autenticación de documentos, protocolización de actos jurídicos y asesoría notarial especializada.</p>
+                    <ul class="service-list">
+                        <li>Autenticación de documentos</li>
+                        <li>Protocolización de actos</li>
+                        <li>Poderes notariales</li>
+                        <li>Certificaciones</li>
+                    </ul>
+                </div>
+                
+                <!-- Servicio 4: Derecho Urbanístico -->
+                <div id="servicio-urbanistico" class="service-card">
+                    <div class="service-icon">
+                        <img src="img/urban-law.svg" alt="Derecho Urbanístico" class="service-img">
+                    </div>
+                    <h3 class="service-title">Derecho Urbanístico</h3>
+                    <p class="service-description">Asesoría en licencias de construcción, uso del suelo, planes de ordenamiento territorial y desarrollo urbano.</p>
+                    <ul class="service-list">
+                        <li>Licencias de construcción</li>
+                        <li>Uso del suelo</li>
+                        <li>Planes de ordenamiento</li>
+                        <li>Desarrollo urbano</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Botón "Ver más" -->
+            <div class="services-cta">
+                <button class="btn-secondary" onclick="showMoreServices()">Ver Más Servicios</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <!-- Título de la sección -->
+            <div class="section-header">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-subtitle">Estamos aquí para ayudarte con tus necesidades legales</p>
+            </div>
+            
+            <div class="contact-content">
+                <!-- Formulario de contacto -->
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+                
+                <!-- Información de contacto y redes sociales -->
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <h3>Información de Contacto</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cúcuta, Colombia</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>3124164455</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cardenasycardenas.com</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Enlaces a redes sociales -->
+                    <div class="social-links">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-link whatsapp" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="#" class="social-link github" title="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="social-link twitter" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cárdenas & Cárdenas</h3>
+                    <p>Asesorías, Consultorías y Defensas en Derecho</p>
+                </div>
+                
+                <div class="footer-info">
+                    <p>© 2025 Cárdenas & Cárdenas – Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace a nuestro archivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
