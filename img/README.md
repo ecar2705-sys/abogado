@@ -54,3 +54,4 @@ Este directorio debe contener las siguientes imágenes generadas por IA:
 - Evitar imágenes genéricas de stock, preferir generación por IA
 - Mantener consistencia en el estilo visual entre todas las imágenes
 
+
